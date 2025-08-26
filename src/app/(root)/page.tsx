@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "@/components";
-// import { getCurrentUser } from "@/lib/auth/actions";
+import {getCurrentUser} from "@/lib/auth/actions";
 
 const products = [
   {
@@ -41,9 +41,9 @@ const products = [
 ];
 
 const Home = async () => {
-  // const user = await getCurrentUser();
+  const user = await getCurrentUser();
 
-  // console.log("USER:", user);
+  console.log('USER:', user);
 
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -61,7 +61,6 @@ const Home = async () => {
               imageSrc={p.imageSrc}
               price={p.price}
               badge={p.badge}
-              href={`/products/${p.id}`}
             />
           ))}
         </div>
